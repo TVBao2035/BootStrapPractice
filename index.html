@@ -8,51 +8,78 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container p-5 text-bg-dark rounded mt-5">
-        <h1 >My First Bootstrap Page</h1>
-        <p class="blockquote-footer my-2">This part is inside a .container class.</p>
-        <p>The .container class provides a responsive fixed width container.</p>
-    </div>
+    <header>
+        <div class="container-fluid navbar navbar-dark bg-dark navbar-expand-sm justify-content-end">
+            <button type="button" class="navbar-toggler mx-3" data-bs-toggle="collapse" data-bs-target="#list-menu">
+                <span class="navbar-toggler-icon" >-</span>
+            </button>
 
-    <div class="container text-white my-2">
-        <div class="row ">
-          <div class="col text-bg-success p-3 border">
-            <h3 class="text-uppercase">Column 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-          </div>
-          <div class="col text-bg-danger p-3 border">
-            <h3 class="text-lowercase">Column 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-          </div>
-          <div class="col text-bg-primary p-3 border">
-            <h3 class="text-capitalize">Column 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-          </div>
-        </div>
-    </div>
-    <div class="container mt-4">
-        <div class="alert alert-success alert-dismissible fade show">
-            <a class="btn-close" data-bs-dismiss="alert"></a>
-            <span><strong>Success</strong> Congratulations on your successful registration</span>
+            <div class="collapse navbar-collapse justify-content-center" id="list-menu">
+                <ul class="nav nav-pills justify-content-center">
+                    <li class="nav-item"><a href="#page_1" data-bs-toggle="pill" class="nav-link active">Page 1</a></li>
+                    <li class="nav-item"><a href="#page_2" data-bs-toggle="pill" class="nav-link">Page 2</a></li>
+                    <li class="nav-item"><a href="#page_3" data-bs-toggle="pill" class="nav-link">Page 3</a></li>
+                    <li class="nav-item"><a href="#page_4" data-bs-toggle="pill" class="nav-link">Page 4</a></li>
+                </ul>       
+            </div>
         </div>
 
-        <div class="alert alert-warning alert-dismissible fade show">
-            <a class="btn-close" data-bs-dismiss="alert"></a>
-            <span><strong>Warning</strong></span>
+    </header>
+    <main class="tab-content">
+        <div id="page_1" class=" tab-pane active container p-5 text-bg-dark rounded mt-5">
+            <h1 >My First Bootstrap Page</h1>
+            <p class="blockquote-footer my-2">This part is inside a .container class.</p>
+            <p>The .container class provides a responsive fixed width container.</p>
         </div>
-
-        <div class="alert alert-danger alert-dismissible fade show">
-            <a class="btn-close" data-bs-dismiss="alert"></a>
-            <a href="https://tvbao2035.github.io/mouseSkill/index.html" class="alert-link text-decoration-none"><strong>Danger</strong></a>
+    
+        <div id="page_2" class="tab-pane container text-white my-2">
+            <div class="row ">
+              <div class="col text-bg-success p-3 border">
+                <h3 class="text-uppercase">Column 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              </div>
+              <div class="col text-bg-danger p-3 border">
+                <h3 class="text-lowercase">Column 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              </div>
+              <div class="col text-bg-primary p-3 border">
+                <h3 class="text-capitalize">Column 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              </div>
+            </div>
         </div>
+        <div id="page_3" class="tab-pane container mt-4">
+            <div class="alert alert-success alert-dismissible fade show">
+                <a class="btn-close" data-bs-dismiss="alert"></a>
+                <span><strong>Success</strong> Congratulations on your successful registration</span>
+            </div>
+    
+            <div class="alert alert-warning alert-dismissible fade show">
+                <a class="btn-close" data-bs-dismiss="alert"></a>
+                <span><strong>Warning</strong></span>
+            </div>
+    
+            <div class="alert alert-danger alert-dismissible fade show">
+                <a class="btn-close" data-bs-dismiss="alert"></a>
+                <a href="https://tvbao2035.github.io/mouseSkill/index.html" class="alert-link text-decoration-none"><strong>Danger</strong></a>
+            </div>
+    
+        </div>
+    
+        <div id="page_4" class="tab-pane container mt-4">
+            <a class="btn btn-primary d-fex "><span class="spinner-border spinner-border-sm"></span> ...Loading</a>
+        </div>
+    </main>
 
-    </div>
-
-    <div class="container mt-4">
-        <a class="btn btn-primary d-fex "><span class="spinner-border spinner-border-sm"></span> ...Loading</a>
-    </div>
+    <footer class="pagination pagination-xl justify-content-center mt-5 mb-4">
+        <li class="page-item"><a class="page-link"  href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </footer> 
 </body>
 </html>
