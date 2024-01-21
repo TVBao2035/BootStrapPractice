@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <!-- nav responsive -->
+      
         <div class="container-fluid navbar navbar-dark bg-dark navbar-expand-sm justify-content-end">
             <button type="button" class="navbar-toggler mx-3" data-bs-toggle="collapse" data-bs-target="#list-menu">
                 <span class="navbar-toggler-icon" >-</span>
@@ -21,19 +21,38 @@
                     <li class="nav-item"><a href="#page_2" data-bs-toggle="pill" class="nav-link">Page 2</a></li>
                     <li class="nav-item"><a href="#page_3" data-bs-toggle="pill" class="nav-link">Page 3</a></li>
                     <li class="nav-item"><a href="#page_4" data-bs-toggle="pill" class="nav-link">Page 4</a></li>
+                    <li class="nav-item"><a href="#page_5" data-bs-toggle="pill" class="nav-link">Page 5</a></li>
                 </ul>       
             </div>
         </div>
 
     </header>
     <main class="tab-content">
-        <div id="page_1" class=" tab-pane active container p-5 text-bg-dark rounded mt-5">
+        <div id="page_1" class="active tab-pane container carousel slide mt-5" data-bs-ride="carousel">
+            <!-- <div class="carousel-indicators w-100 mx-0 my-0">
+                <button type="button" data-bs-target="#page_1" data-bs-slide-to="0" class="active">1</button>
+                <button type="button" data-bs-target="#page_1" data-bs-slide-to="1">1</button>
+                <button type="button" data-bs-target="#page_1" data-bs-slide-to="2">1</button>
+            </div> -->
+            <div class="carousel-inner">
+                <img src="/img/img-2.png"  alt="img_1" class="carousel-item w-100 rounded-4" >
+                <img src="/img/img-1.png" alt="img_2" class="active carousel-item w-100 rounded-4">
+                <img src="/img/img-3.png" alt="img_3" class="carousel-item w-100 rounded-4"  >
+            </div>
+            <!-- <button class="carousel-control-prev" data-bs-target="#page_1" data-bs-slide="prev" type="button">
+                <span class="carousel-control-prev-icon">0</span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#page_1" data-bs-slide="next" type="button" >
+                <span class="carousel-control-next-icon">0</span>
+            </button> -->
+        </div>
+        <div id="page_2" class=" tab-pane container p-5 text-bg-dark rounded mt-5">
             <h1 >My First Bootstrap Page</h1>
             <p class="blockquote-footer my-2">This part is inside a .container class.</p>
             <p>The .container class provides a responsive fixed width container.</p>
         </div>
     
-        <div id="page_2" class="tab-pane container text-white my-2">
+        <div id="page_3" class="tab-pane container text-white my-2">
             <div class="row ">
               <div class="col text-bg-success p-3 border">
                 <h3 class="text-uppercase">Column 1</h3>
@@ -52,7 +71,7 @@
               </div>
             </div>
         </div>
-        <div id="page_3" class="tab-pane container mt-4">
+        <div id="page_4" class="tab-pane container mt-4">
             <div class="alert alert-success alert-dismissible fade show">
                 <a class="btn-close" data-bs-dismiss="alert"></a>
                 <span><strong>Success</strong> Congratulations on your successful registration</span>
@@ -70,17 +89,46 @@
     
         </div>
     
-        <div id="page_4" class="tab-pane container mt-4">
+        <div id="page_5" class="tab-pane container mt-4">
             <a class="btn btn-primary d-fex "><span class="spinner-border spinner-border-sm"></span> ...Loading</a>
+            <div class="dropdown">
+                <a  class="btn dropdown-toggle text-bg-primary mt-4 " data-bs-target="#list_item" data-bs-toggle="dropdown">
+                    List items 
+                </a>
+                <ul class="dropdown-menu" id="list_item">
+                    <li class="dropdown-item">item 1</li>
+                    <li class="dropdown-item">item 2</li>
+                    <li class="dropdown-item">item 3</li>
+                </ul>
+            </div>
+            
+            <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#myModal">Open Modal</button>
+
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog bg-white">
+                    <div class="modal-header">
+                        <h1 class="modal-title">This is Header</h1>
+                        <span class="btn-close" data-bs-dismiss="modal"></span>
+                    </div>
+                    <div class="modal-body">
+                        <p>This is Body</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
-    <footer class="pagination pagination-xl justify-content-center mt-5 mb-4">
-        <li class="page-item"><a class="page-link"  href="#">Previous</a></li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    <footer>
+        <ul class="pagination pagination-sm justify-content-center mt-5 mb-4">
+            <li class="page-item"><a class="page-link"  href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
     </footer> 
 </body>
 </html>
